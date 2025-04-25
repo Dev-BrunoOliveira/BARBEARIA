@@ -23,7 +23,7 @@ export default function App() {
       <li>
       <h1
   style={{
-    backgroundColor: "#8b0000",
+    backgroundColor: "#402313",
     color: "white",
     padding: "8px 16px",
     marginBottom: "20px",
@@ -42,7 +42,7 @@ export default function App() {
         <li key={hora} style={{ marginBottom: "10px" }}>
           <button
             style={{
-              backgroundColor: "#8b0000",
+              backgroundColor: "#402313",
               color: "white",
               border: "none",
               padding: "8px 16px",
