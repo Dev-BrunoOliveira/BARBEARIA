@@ -69,7 +69,6 @@ button:hover {
     transition: opacity 0.3s ease, visibility 0s 0.3s; 
 }
 
-
 .modal.show {
     visibility: visible;
     opacity: 1;
