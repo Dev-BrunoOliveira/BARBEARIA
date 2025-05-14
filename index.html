@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barber Shop</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Agende Seu Horário</h1>
+      <ul id="listaHorarios"></ul>
+    </div>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Confirmar Agendamento</h2>
+        <p>Horário escolhido: <span id="horarioEscolhido"></span></p>
+        <form id="formAgendamento">
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            autocomplete="off"
+            placeholder="Digite seu nome"
+          />
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            autocomplete="off"
+            placeholder="Digite seu telefone"
+          />
+          // JSX novo
+          <div className="form-container">
+          
+          <div class="botoes">
+            <button type="submit">Confirmar</button>
+            <button type="button" onclick="fecharModal()">Fechar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
