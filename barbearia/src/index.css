@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box; /* Adiciona box-sizing para todos os elementos */
+}
+
 body,
 html {
   margin: 0;
@@ -60,6 +64,8 @@ button {
   cursor: pointer;
   border-radius: 5px;
   transition: background 0.3s ease;
+  width: 45%;
+  margin: 5px 0;
 }
 
 button:hover {
@@ -117,10 +123,11 @@ button:hover {
 .botoes {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .botoes button {
-  width: 48%;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -150,34 +157,5 @@ button:hover {
   .modal-content {
     max-width: 90%;
     padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .container {
-    max-width: 95%;
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 1.6em;
-  }
-
-  li {
-    font-size: 14px;
-    padding: 6px;
-  }
-
-  button {
-    padding: 6px;
-  }
-
-  .modal-content {
-    padding: 10px;
   }
 }
