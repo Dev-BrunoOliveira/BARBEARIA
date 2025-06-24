@@ -4,7 +4,7 @@ import "./App.css";
 
 export default function App() {
   const [horarioSelecionado, setHorarioSelecionado] = useState("");
-  const horarios = [
+  const [horariosDisponiveis, setHorariosDisponiveis] = useState([
     "09:00",
     "10:00",
     "11:00",
@@ -15,7 +15,14 @@ export default function App() {
     "17:00",
     "18:00",
     "19:00",
-  ];
+  ]);
+
+  const agendarHorario = (hora) => {
+    setHorarioSelecionado(hora);
+    setHorariosDisponiveis((horarios) =>
+      horarios.filter((h) => h !== hora)
+    );
+  };
 
   return (
     <div style={{ padding: "3rem" }}>
@@ -38,25 +45,30 @@ export default function App() {
           </h1>
         </li>
 
-        {horarios.map((hora) => (
-          <li key={hora} style={{ marginBottom: "10px" }}>
-            <button
-              style={{
-                backgroundColor: "#402313",
-                color: "white",
-                border: "none",
-                padding: "8px 16px",
-                borderRadius: "6px",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
-              onClick={() => setHorarioSelecionado(hora)}
-            >
-              {hora}
-            </button>
-          </li>
-        ))}
+        {horariosDisponiveis.length > 0 ? (
+          horariosDisponiveis.map((hora) => (
+            <li key={hora} style={{ marginBottom: "10px" }}>
+              <button
+                style={{
+                  backgroundColor: "#402313",
+                  color: "white",
+                  border: "none",
+                  padding: "8px 16px",
+                  borderRadius: "6px",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                }}
+                onClick={() => agendarHorario(hora)}
+              >
+                {hora}
+              </button>
+            </li>
+          ))
+        ) : (
+          <p style={{ fontFamily: "Segoe UI, sans-serif" }}>Todos os horários foram agendados 🎉</p>
+        )}
       </ul>
+
       {horarioSelecionado && (
         <BookingForm
           horario={horarioSelecionado}

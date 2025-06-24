@@ -45,9 +45,9 @@ export default function BookingForm({ horario, fechar }) {
           </>
         ) : (
           <div style={{ textAlign: "center" }}>
-            <h2 style={{ color: "#402313" }}>😎 Confirmado!</h2>
+            <h2 style={{ color: "#402313" }}> Confirmado!</h2>
             <p>
-              Agora vai ficar bonitão, te esperamos às{" "}
+              Agora vai roubar a cena, te esperamos às{" "}
               <strong>{horario}</strong>, {nome}!
             </p>
           </div>
