@@ -1,7 +1,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 22px;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(/img/barbearia.jpg);
+  background: linear-gradient url(/img/barbearia.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
